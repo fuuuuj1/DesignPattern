@@ -1,0 +1,7 @@
+services:
+  phpunit:
+    build: .
+    volumes:
+      - .:/app
+    stdin_open: true # コンテナの標準入力を開く
+    tty: true # インタラクティブモード
