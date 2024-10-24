@@ -1,9 +1,9 @@
 <?php
 
-namespace DesignPatterns\Strategy\Duck;
+namespace Strategy\Duck;
 
-use DesignPatterns\Strategy\Behavior\FlyWithWing;
-use DesignPatterns\Strategy\Behavior\Quack;
+use Strategy\Behavior\FlyWithWing;
+use Strategy\Behavior\Quack;
 
 class MallardDuck extends Duck
 {

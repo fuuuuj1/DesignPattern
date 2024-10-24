@@ -1,9 +1,9 @@
 <?php
 
-namespace DesignPatterns\Strategy\Duck;
+namespace Strategy\Duck;
 
-use DesignPatterns\Strategy\Behavior\FlyBehavior;
-use DesignPatterns\Strategy\Behavior\QuackBehavior;
+use Strategy\Behavior\FlyBehavior;
+use Strategy\Behavior\QuackBehavior;
 
 class Duck
 {

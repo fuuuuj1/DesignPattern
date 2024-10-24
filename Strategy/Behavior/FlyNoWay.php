@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPatterns\Strategy\Behavior;
+namespace Strategy\Behavior;
 
 class FlyNoWay implements FlyBehavior
 {
