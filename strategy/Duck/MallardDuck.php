@@ -2,13 +2,15 @@
 
 namespace Strategy\Duck;
 
+use Strategy\Behavior\FlyBehavior;
 use Strategy\Behavior\FlyWithWing;
 use Strategy\Behavior\Quack;
+use Strategy\Behavior\QuackBehavior;
 
 class MallardDuck extends Duck
 {
-    private $fly_behavior;
-    private $quack_behavior;
+    protected FlyBehavior $fly_behavior;
+    protected QuackBehavior $quack_behavior;
 
     /**
      * マガモのコンストラクタ
