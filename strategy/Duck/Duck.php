@@ -24,6 +24,26 @@ class Duck
 
     /**
      * 飛ぶ振る舞いを設定
+     *
+     * @param FlyBehavior $fly_behavior
+     */
+    public function setFlyBehavior(FlyBehavior $fly_behavior): void
+    {
+        $this->fly_behavior = $fly_behavior;
+    }
+
+    /**
+     * 鳴く振る舞いを設定
+     *
+     * @param QuackBehavior $quack_behavior
+     */
+    public function setQuackBehavior(QuackBehavior $quack_behavior): void
+    {
+        $this->quack_behavior = $quack_behavior;
+    }
+
+    /**
+     * 飛ぶ振る舞いを設定
      */
     public function performFly(): void
     {
