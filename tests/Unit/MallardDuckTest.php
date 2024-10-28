@@ -20,13 +20,38 @@ class MallardDuckTest extends TestCase
     }
 
     /**
-     * 標準出力に「quack」と表示されること
-     *
-     * @return void
+     * @test
      */
     public function test_quack()
     {
         $this->expectOutputString("Quack\n");
         $this->duck->performQuack();
+    }
+
+    /**
+     * @test
+     */
+    public function test_fly()
+    {
+        $this->expectOutputString("I'm flying\n");
+        $this->duck->performFly();
+    }
+
+    /**
+     * @test
+     */
+    public function test_display()
+    {
+        $this->expectOutputString("I'm a real Mallard duck\n");
+        $this->duck->display();
+    }
+
+    /**
+     * @test
+     */
+    public function test_swim()
+    {
+        $this->expectOutputString("All ducks float, even decoys!\n");
+        $this->duck->swim();
     }
 }
