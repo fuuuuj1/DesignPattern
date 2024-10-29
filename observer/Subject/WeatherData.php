@@ -125,4 +125,14 @@ class WeatherData implements Subject
     {
         return $this->pressure;
     }
+
+    /**
+     * オブザーバー登録数の取得
+     *
+     * @return integer
+     */
+    public function getObserverCount(): int
+    {
+        return count($this->observers);
+    }
 }
