@@ -42,6 +42,6 @@ class CurrentConditionDisplay implements DisplayElement, Observer
     public function display(): void
     {
         // 小数点1桁まで表示
-        printf("現在の気象状況： 温度:%.1f度 | 湿度:%.1f%%", $this->temperature, $this->humidity);
+        printf("現在の気象状況： 温度:%.1f度 | 湿度:%.1f%%\n", $this->temperature, $this->humidity);
     }
 }
