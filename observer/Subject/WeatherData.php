@@ -61,11 +61,7 @@ class WeatherData implements Subject
     public function notifyObservers(): void
     {
         foreach ($this->observers as $observer) {
-            $observer->update(
-                $this->temperature,
-                $this->humidity,
-                $this->pressure
-            );
+            $observer->update();
         }
     }
 

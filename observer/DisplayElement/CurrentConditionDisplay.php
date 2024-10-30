@@ -25,15 +25,12 @@ class CurrentConditionDisplay implements DisplayElement, Observer
     /**
      * 気象観測情報の更新
      *
-     * @param float $temperature
-     * @param float $humidity
-     * @param float $pressure
      * @return void
      */
-    public function update(float $temperature, float $humidity, float $pressure)
+    public function update()
     {
-        $this->temperature = $temperature;
-        $this->humidity = $humidity;
+        $this->temperature = $this->weather_data->getTemperature();
+        $this->humidity = $this->weather_data->getHumidity();
         $this->display();
     }
 
