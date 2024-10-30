@@ -3,6 +3,7 @@
 namespace Tests\Functional;
 
 use Observer\DisplayElement\CurrentConditionDisplay;
+use Observer\DisplayElement\RandomMessageDisplay;
 use Observer\Subject\WeatherData;
 use PHPUnit\Framework\TestCase;
 
@@ -23,12 +24,13 @@ class ObserverTest extends TestCase
 
         // 気象情報を表示するクラスのインスタンス化
         $current_condition_display = new CurrentConditionDisplay($weather_data);
+        $random_message_display = new RandomMessageDisplay($weather_data);
 
         // Act
         // 適当な気象情報のセット
         $weather_data->setMeasurements(22.7, 57.2, 1013.0);
 
         // Assert
-        $this->expectOutputString("現在の気象状況： 温度:22.7度 | 湿度:57.2%");
+        $this->expectOutputString("現在の気象状況： 温度:22.7度 | 湿度:57.2%\n今日のひと言: ぼちぼち\n");
     }
 }
